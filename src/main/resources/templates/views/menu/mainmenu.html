@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main menu</title>
+</head>
+<body>
+<h2>Main menu</h2>
+<div>
+    <label for="manager"></label>
+    <a th:href="@{/personal/list-managers}" id="manager">list of managers</a>
+</div>
+<div>
+    <label for="factoryWorkers"></label>
+    <a th:href="@{/personal/list-factoryWorkers}" id="factoryWorkers">list of factoryWorkers</a>
+</div>
+<div>
+    <label for="storeWorkers"></label>
+    <a th:href="@{/personal/list-storeWorkers}" id="storeWorkers">list of storeWorkers</a>
+</div>
+<div>
+    <label for="store"></label>
+    <a th:href="@{/store/list-resources}" id="store">store</a>
+</div>
+<div>
+    <label for="beerGrades"></label>
+    <a th:href="@{/gradeBeer/list-beerGrades}" id="beerGrades">list of beerGrades</a>
+</div>
+<div>
+    <label for="queryResources"></label>
+    <a th:href="@{/query-resource/list-queryResources}" id="queryResources">list of queryResources</a>
+</div>
+<div>
+    <label for="queryParts"></label>
+    <a th:href="@{/query-part//list-parts}" id="queryParts">list of queryParts</a>
+</div>
+
+</body>
+</html>

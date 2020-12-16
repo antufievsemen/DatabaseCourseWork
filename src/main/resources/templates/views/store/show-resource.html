@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resource</title>
+</head>
+<body>
+<h2>Resource</h2>
+<div>
+    <p th:text="${resource.toString()}"> VALUE</p>
+</div>
+<div>
+    <a th:href="@{/store/updateResource/{id}(id=${resource.getId()})}">update resource</a>
+</div>
+<div>
+    <a th:href="@{/store/deleteResource/{id}(id=${resource.getId()})}">delete resource</a>
+</div>
+</body>
+</html>

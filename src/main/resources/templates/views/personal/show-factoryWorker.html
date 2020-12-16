@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Factory worker</title>
+</head>
+<body>
+<h2>Factory worker</h2>
+<div>
+    <p th:text="${factoryWorker.fullInfo()}"> VALUE</p>
+</div>
+<div>
+    <a th:href="@{/personal/updateFactoryWorker/{id}(id=${factoryWorker.getId()})}">update factory worker</a>
+</div>
+<div>
+    <a th:href="@{/personal/deleteFactoryWorker/{id}(id=${factoryWorker.getId()})}">delete factory worker</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update grade beer</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/store/updateResource}" th:object="${resource}">
+    <label for="id">id : </label>
+    <input readonly type="number" th:field="*{id}" id="id">
+    <br/>
+
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+
+    <label for="count">Enter count: </label>
+    <input type="number" th:field="*{count}" id="count"/>
+    <br/>
+
+    <label for="cost">Enter cost: </label>
+    <input type="number" th:field="*{cost}" id="cost"/>
+    <br/>
+
+    <label for="lastSupply">Enter last supply: </label>
+    <input type="date" th:field="*{lastSupply}" id="lastSupply"/>
+    <br/>
+
+    <input type="submit" value="Update!"/>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list-beerGrades</title>
+</head>
+<body>
+<h2>Beer grades</h2>
+<div th:each="grade : ${beerGrades}">
+    <a th:href="@{beerGrade/{id}(id=${grade.getId()})}" th:text="${grade.getIdAndName()}">VALUE</a>
+</div>
+<div>
+    <a th:href="@{addGradeBeer}">create grade beer</a>
+</div>
+</body>
+</html>

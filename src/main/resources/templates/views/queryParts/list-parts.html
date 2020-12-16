@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list-parts</title>
+</head>
+<body>
+<h2>Query parts</h2>
+<div th:each="QueryPart : ${parts}">
+    <label for="partLabel">Query part id = </label>
+    <a id="partLabel" th:href="@{part/{id}(id=${QueryPart.getId()})}" th:text="${QueryPart.getId()}">VALUE</a>
+</div>
+<div>
+    <a th:href="@{addQueryPart}">create query part</a>
+</div>
+</body>
+</html>

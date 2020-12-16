@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update storeWorker</title>
+</head>
+<body>
+<h2>Update store worker</h2>
+<form th:method="POST" th:action="@{/personal/updateStoreWorker}" th:object="${storeWorker}">
+    <label for="id">id : </label>
+    <input readonly type="number" th:field="*{id}" id="id">
+    <br/>
+
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+
+    <label for="secondName">Enter second name: </label>
+    <input type="text" th:field="*{secondName}" id="secondName"/>
+    <br/>
+
+    <label for="salary">Enter salary: </label>
+    <input type="number" th:field="*{salary}" id="salary"/>
+    <br/>
+
+    <label for="workExperience">Enter workExperience: </label>
+    <input type="text" th:field="*{workExperience}" id="workExperience"/>
+    <br/>
+
+    <label for="phone">Enter phone: </label>
+    <input type="number" th:field="*{phone}" id="phone"/>
+    <br/>
+
+    <label for="passportNumber">Enter passportNumber: </label>
+    <input type="text" th:field="*{passportNumber}" id="passportNumber"/>
+    <br/>
+
+    <label for="completedOrders">Enter completedOrders: </label>
+    <input type="number" th:field="*{completedOrders}" id="completedOrders"/>
+    <br/>
+
+    <input type="submit" value="Update!"/>
+</form>
+
+</body>
+</html>

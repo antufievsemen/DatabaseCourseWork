@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list-storeWorkers</title>
+</head>
+<body>
+<h2>Store workers</h2>
+<div th:each="storeWorker : ${storeWorkers}">
+    <a th:href="@{storeWorker/{id}(id=${storeWorker.getId()})}" th:text="${storeWorker.getFullName()}">VALUE</a>
+</div>
+<div>
+    <a th:href="@{addStoreWorker}">create store worker</a>
+</div>
+</body>
+</html>

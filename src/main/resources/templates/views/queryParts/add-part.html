@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New resource</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/query-part/addQueryPart}" th:object="${part}">
+    <label for="factory">Enter passport number of factory worker: </label>
+    <input type="text" th:field="*{factoryWorker.passportNumber}" id="factory"/>
+    <br/>
+
+    <label for="manager">Enter passport number of manager: </label>
+    <input type="text" th:field="*{manager.passportNumber}" id="manager"/>
+    <br/>
+
+    <label for="gradeBeer">Enter number of grade beer : </label>
+    <input type="number" th:field="*{gradeBeer.id}" id="gradeBeer"/>
+    <br/>
+
+    <label for="countNeeded">Enter count needed : </label>
+    <input type="number" th:field="*{countNeeded}" id="countNeeded"/>
+    <br/>
+
+    <label for="dateBegin">Enter date begin: </label>
+    <input type="date" th:field="*{dateBegin}" id="dateBegin"/>
+    <br/>
+
+    <label for="priority">Enter priority : </label>
+    <input type="number" th:field="*{priority}" id="priority"/>
+    <br/>
+
+    <input type="submit" value="Create"/>
+</form>
+
+</body>
+</html>

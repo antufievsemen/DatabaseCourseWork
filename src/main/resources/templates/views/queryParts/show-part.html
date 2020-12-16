@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Part</title>
+</head>
+<body>
+<h2>Query part</h2>
+<div>
+    <p th:text="${part.toString()}"> VALUE</p>
+</div>
+<div>
+    <a th:href="@{/query-part/updateQueryPart/{id}(id=${part.getId()})}">update query part</a>
+</div>
+<div>
+    <a th:href="@{/query-part/deleteQueryPart/{id}(id=${part.getId()})}">delete query part</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New store worker</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/personal/addStoreWorker}" th:object="${storeWorker}">
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+
+    <label for="secondName">Enter second name: </label>
+    <input type="text" th:field="*{secondName}" id="secondName"/>
+    <br/>
+
+    <label for="salary">Enter salary: </label>
+    <input type="number" th:field="*{salary}" id="salary"/>
+    <br/>
+
+    <label for="workExperience">Enter work experience: </label>
+    <input type="text" th:field="*{workExperience}" id="workExperience"/>
+    <br/>
+
+    <label for="phone">Enter phone: </label>
+    <input type="number" th:field="*{phone}" id="phone"/>
+    <br/>
+
+    <label for="passportNumber">Enter passport number: </label>
+    <input type="text" th:field="*{passportNumber}" id="passportNumber"/>
+    <br/>
+
+    <label for="completedOrders">Enter completed orders: </label>
+    <input type="number" th:field="*{completedOrders}" id="completedOrders"/>
+    <br/>
+
+    <label for="login">Enter login: </label>
+    <input type="text" th:field="*{user.username}" id="login"/>
+    <br/>
+
+    <label for="password">Enter password: </label>
+    <input type="text" th:field="*{user.password}" id="password"/>
+    <br/>
+
+    <input type="submit" value="Create"/>
+</form>
+
+</body>
+</html>

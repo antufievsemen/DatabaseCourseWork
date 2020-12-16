@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New resource</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/store/addResource}" th:object="${resource}">
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+
+    <label for="count">Enter count: </label>
+    <input type="number" th:field="*{count}" id="count"/>
+    <br/>
+
+    <label for="cost">Enter cost: </label>
+    <input type="number" th:field="*{cost}" id="cost"/>
+    <br/>
+
+    <label for="lastSup">Enter last supply: </label>
+    <input type="date" th:field="*{lastSupply}" id="lastSup"/>
+    <br/>
+
+    <input type="submit" value="Create"/>
+</form>
+
+</body>
+</html>

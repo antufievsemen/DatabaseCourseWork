@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update grade beer</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/gradeBeer/updateGradeBeer}" th:object="${gradeBeer}">
+    <label for="id">id : </label>
+    <input readonly type="number" th:field="*{id}" id="id">
+    <br/>
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+
+    <label for="cost">Enter cost: </label>
+    <input type="number" th:field="*{cost}" id="cost"/>
+    <br/>
+
+    <label for="description">Enter description: </label>
+    <input type="text" th:field="*{description}" id="description"/>
+    <br/>
+
+    <input type="submit" value="Update!"/>
+</form>
+
+</body>
+</html>

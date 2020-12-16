@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update query resource</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/query-resource/updateQueryResource}" th:object="${queryResource}">
+    <label for="id">id : </label>
+    <input readonly type="number" th:field="*{id}" id="id">
+    <br/>
+
+    <label for="name">Enter name: </label>
+    <input readonly type="text" th:field="*{factoryWorker.name}" id="name"/>
+    <br/>
+
+    <label for="secondName">Enter second name: </label>
+    <input readonly type="text" th:field="*{factoryWorker.secondName}" id="secondName"/>
+    <br/>
+
+    <label for="workExperience">Enter workExperience: </label>
+    <input readonly type="text" th:field="*{factoryWorker.workExperience}" id="workExperience"/>
+    <br/>
+
+    <label for="phone">Enter phone: </label>
+    <input readonly type="number" th:field="*{factoryWorker.phone}" id="phone"/>
+    <br/>
+
+    <label for="passportNumber">Enter passportNumber: </label>
+    <input type="text" th:field="*{factoryWorker.passportNumber}" id="passportNumber"/>
+    <br/>
+
+    <label for="completedOrders">Enter completedOrders: </label>
+    <input readonly type="number" th:field="*{factoryWorker.completedOrders}" id="completedOrders"/>
+    <br/>
+
+    <label for="storeWorker.id">id : </label>
+    <input readonly type="number" th:field="*{storeWorker.id}" id="storeWorker.id">
+    <br/>
+
+    <label for="storeWorker.name">Enter name: </label>
+    <input readonly type="text" th:field="*{storeWorker.name}" id="storeWorker.name"/>
+    <br/>
+
+    <label for="storeWorker.secondName">Enter second name: </label>
+    <input readonly type="text" th:field="*{storeWorker.secondName}" id="storeWorker.secondName"/>
+    <br/>
+
+    <label for="storeWorker.workExperience">Enter workExperience: </label>
+    <input readonly type="text" th:field="*{storeWorker.workExperience}" id="storeWorker.workExperience"/>
+    <br/>
+
+    <label for="storeWorker.phone">Enter phone: </label>
+    <input readonly type="number" th:field="*{storeWorker.phone}" id="storeWorker.phone"/>
+    <br/>
+
+    <label for="storeWorker.passportNumber">Enter passportNumber: </label>
+    <input type="text" th:field="*{storeWorker.passportNumber}" id="storeWorker.passportNumber"/>
+    <br/>
+
+    <label for="storeWorker.completedOrders">Enter completedOrders: </label>
+    <input readonly type="number" th:field="*{storeWorker.completedOrders}" id="storeWorker.completedOrders"/>
+    <br/>
+
+    <label for="countNeeded">Enter countNeeded: </label>
+    <input type="number" th:field="*{countNeeded}" id="countNeeded"/>
+    <br/>
+
+    <label for="dateBegin">Enter dateBegin: </label>
+    <input type="date" th:field="*{dateBegin}" id="dateBegin"/>
+    <br/>
+
+    <label for="priority">Enter priority: </label>
+    <input type="number" th:field="*{priority}" id="priority"/>
+    <br/>
+
+    <label for="resource">Enter number of resource : </label>
+    <input type="number" th:field="*{resource.id}" id="resource"/>
+    <br/>
+
+    <input type="submit" value="Update!"/>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list-queryResource</title>
+</head>
+<body>
+<h2>Query resources</h2>
+<div th:each="query : ${queryResources}">
+    <label for="queryLabel">Query resource id = </label>
+    <a id="queryLabel" th:href="@{queryResource/{id}(id=${query.getId()})}" th:text="${query.getId()}">VALUE</a>
+</div>
+<div>
+    <a th:href="@{addQueryResource}">create query resource</a>
+</div>
+</body>
+</html>

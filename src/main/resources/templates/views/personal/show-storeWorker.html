@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Store worker</title>
+</head>
+<body>
+<h2>Store worker</h2>
+<div>
+    <p th:text="${storeWorker.fullInfo()}"> VALUE</p>
+</div>
+<div>
+    <a th:href="@{/personal/updateStoreWorker/{id}(id=${storeWorker.getId()})}">update store worker</a>
+</div>
+<div>
+    <a th:href="@{/personal/deleteStoreWorker/{id}(id=${storeWorker.getId()})}">delete store worker</a>
+</div>
+</body>
+</html>

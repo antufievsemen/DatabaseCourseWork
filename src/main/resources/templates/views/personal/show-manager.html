@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manager</title>
+</head>
+<body>
+<h2>Manager</h2>
+<div>
+    <p th:text="${manager.fullInfo()}"> VALUE</p>
+</div>
+<div>
+    <a th:href="@{/personal/updateManager/{id}(id=${manager.getId()})}">update manager</a>
+</div>
+<div>
+    <a th:href="@{/personal/deleteManager/{id}(id=${manager.getId()})}">delete manager</a>
+</div>
+</body>
+</html>

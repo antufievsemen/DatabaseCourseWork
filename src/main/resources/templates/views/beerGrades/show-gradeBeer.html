@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade beer</title>
+</head>
+<body>
+<h2>Grade beer</h2>
+<div>
+    <p th:text="${gradeBeer.toString()}">VALUE</p>
+</div>
+<div>
+    <a th:href="@{/gradeBeer/updateGradeBeer/{id}(id=${gradeBeer.getId()})}">update grade beer</a>
+</div>
+<div>
+    <a th:href="@{/gradeBeer/deleteGradeBeer/{id}(id=${gradeBeer.getId()})}">delete grade beer</a>
+</div>
+</body>
+</html>

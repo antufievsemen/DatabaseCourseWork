@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list-factoryWorkers</title>
+</head>
+<body>
+<h2>Factory workers</h2>
+<div th:each="worker : ${factoryWorkers}">
+    <a th:href="@{factoryWorker/{id}(id=${worker.getId()})}" th:text="${worker.getFullName()}">VALUE</a>
+</div>
+<div>
+    <a th:href="@{addFactoryWorker}">create factory worker</a>
+</div>
+</body>
+</html>
