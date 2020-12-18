@@ -2,6 +2,7 @@ package ru.spbstu.antufievsemen.coursedatabase.service;
 
 import java.util.List;
 import java.util.Optional;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import ru.spbstu.antufievsemen.coursedatabase.entity.User;
@@ -47,7 +48,11 @@ public class UserService {
   }
 
   public User findUserByUsername(String login) {
-    return userRepository.findUserByUsername(login);
+    Optional<User> user = Optional.ofNullable(userRepository.findUserByUsername(login));
+    if (user.isPresent()) {
+      return user.get();
+    }
+    throw new UsernameNotFoundException("username : " + login + "doesnt exist");
   }
 
   public User deleteUserById(long id) {

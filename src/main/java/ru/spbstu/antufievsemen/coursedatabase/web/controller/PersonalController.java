@@ -141,14 +141,11 @@ public class PersonalController {
   public String updateManager(Model model, @PathVariable("id") long id) {
     Manager manager = managerService.findManagerById(id);
     model.addAttribute("manager", manager);
-    logger.info(manager.fullInfo());
     return "views/personal/update-manager";
   }
 
   @PostMapping("/updateManager")
   public String editManager(Manager manager) {
-    logger.info(manager.fullInfo()
-    );
     managerService.updateManager(manager);
     return "redirect:list-managers";
   }
